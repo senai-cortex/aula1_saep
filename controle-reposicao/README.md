@@ -1,6 +1,6 @@
 | Entrega | Link |
 |---|---|
-| Caso de uso | [docs/caso-de-uso.drawio](../docs/caso-de-uso.drawio) |
+| Caso de uso | [docs/caso-de-uso.png](../docs/caso-de-uso.png) |
 | DER | [docs/DER.drawio](../docs/DER.drawio) |
 | Script SQL | [data/database.sql](../data/database.sql) |
 | Backend Flask | [app.py](app.py) |
