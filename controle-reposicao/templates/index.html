@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Reposição</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="topo">
+        <h1>Controle de Reposição de Medicamentos</h1>
+        <nav class="menu">
+            <a href="/" class="ativo">Painel</a>
+            <a href="/funcionarios">Funcionários</a>
+            <a href="/pedidos">Novo pedido</a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <h2>Painel de Reposição</h2>
+        <p class="dica">Os pedidos de urgência <strong>alta</strong> aparecem primeiro em cada coluna.</p>
+        <div id="mensagem" class="mensagem" hidden></div>
+
+        <section class="painel">
+            <div class="coluna">
+                <h3>Solicitado</h3>
+                <div id="col-solicitado" class="lista-cards"></div>
+            </div>
+            <div class="coluna">
+                <h3>Em separação</h3>
+                <div id="col-em-separacao" class="lista-cards"></div>
+            </div>
+            <div class="coluna">
+                <h3>Recebido</h3>
+                <div id="col-recebido" class="lista-cards"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", carregarPainel);
+    </script>
+</body>
+</html>

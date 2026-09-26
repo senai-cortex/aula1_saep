@@ -1,0 +1,163 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.topo {
+    background: #0A7D5A;
+    color: #FFFFFF;
+    padding: 16px 24px;
+}
+
+.topo h1 {
+    margin: 0 0 12px 0;
+    font-size: 22px;
+}
+
+.menu { display: flex; gap: 12px; }
+
+.menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 1px solid #FFFFFF;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+
+.menu a.ativo, .menu a:hover {
+    background: #FFFFFF;
+    color: #0A7D5A;
+}
+
+.conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.dica { margin-top: 0; }
+
+.mensagem {
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.mensagem.sucesso {
+    background: #e6f4ef;
+    border: 1px solid #0A7D5A;
+    color: #0A7D5A;
+}
+
+.mensagem.erro {
+    background: #fdecea;
+    border: 1px solid #a12622;
+    color: #a12622;
+}
+
+.form {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.form label { font-weight: 600; margin-top: 8px; }
+
+.form input, .form select {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    padding: 8px 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.form button {
+    margin-top: 14px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    background: #0A7D5A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form button:hover { opacity: 0.9; }
+
+.painel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.coluna {
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 12px;
+    background: #FFFFFF;
+}
+
+.coluna h3 {
+    margin: 0 0 12px 0;
+    background: #0A7D5A;
+    color: #FFFFFF;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.lista-cards { display: flex; flex-direction: column; gap: 12px; }
+
+.card {
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 12px;
+    background: #FFFFFF;
+}
+
+.card p { margin: 4px 0; }
+
+.card .urgencia-alta { font-weight: 700; color: #a12622; }
+
+.card .acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.card button, .card select {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.card button {
+    cursor: pointer;
+    border: 1px solid #0A7D5A;
+    background: #FFFFFF;
+    color: #0A7D5A;
+}
+
+.card button.btn-excluir { border-color: #000000; color: #000000; }
+
+.card button.btn-status, .card button.btn-editar { background: #0A7D5A; color: #FFFFFF; border: none; }
+
+.lista-simples { padding-left: 20px; }
+
+.texto-vazio { color: #555; }
+
+@media (max-width: 800px) {
+    .painel { grid-template-columns: 1fr; }
+}

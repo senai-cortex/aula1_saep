@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pedidos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="topo">
+        <h1>Controle de Reposição de Medicamentos</h1>
+        <nav class="menu">
+            <a href="/">Painel</a>
+            <a href="/funcionarios">Funcionários</a>
+            <a href="/pedidos" class="ativo">Novo pedido</a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <h2 id="titulo-pedido">Cadastro de Pedidos</h2>
+        <div id="mensagem" class="mensagem" hidden></div>
+
+        <form id="form-pedido" class="form" novalidate>
+            <input type="hidden" id="id_pedido" value="">
+
+            <label for="medicamento">Medicamento</label>
+            <input type="text" id="medicamento" name="medicamento" maxlength="150" placeholder="Ex: Paracetamol 500mg">
+
+            <label for="quantidade">Quantidade</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" step="1" placeholder="Ex: 50">
+
+            <label for="categoria">Categoria</label>
+            <input type="text" id="categoria" name="categoria" maxlength="50" placeholder="Ex: generico">
+
+            <label for="id_funcionario">Funcionário</label>
+            <select id="id_funcionario" name="id_funcionario">
+                <option value="">Selecionar funcionário</option>
+            </select>
+
+            <label for="urgencia">Urgência</label>
+            <select id="urgencia" name="urgencia">
+                <option value="">Selecionar urgência</option>
+                <option value="baixa">baixa</option>
+                <option value="media">media</option>
+                <option value="alta">alta</option>
+            </select>
+
+            <button type="submit" id="btn-salvar-pedido">Cadastrar pedido</button>
+        </form>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", initPaginaPedidos);
+    </script>
+</body>
+</html>
